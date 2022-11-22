@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   font-family: "Signika Negative", sans-serif;
 }
 body {
@@ -21,7 +21,7 @@ header {
 /* logo  */
 header img {
   /* position: absolute; */
-  width: 11vw;
+  width: 6vw;
   z-index: 2;
 }
 #logo {
@@ -33,6 +33,7 @@ header img {
 #navbar ul {
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
 }
 #navbar section a {
   text-decoration: none;
@@ -54,38 +55,38 @@ header img {
   /* font-weight:600; */
 }
 #navbar li:hover button {
-  background-color: rgb(105, 12, 148);
-  border-radius: 10px;
-  color: white;
+  /* text-decoration: underline; */
+  text-decoration-color: #324A51;
+  color: #465f77;
 }
 
 #navbar::before {
   content: "";
-  background-color: rgb(60, 14, 242);
-  height: 13%;
+  /* background-color:#D0B4A1; */
+  background: linear-gradient(0deg, rgba(50,74,81,1) 0%, rgba(208,180,161,1) 14%);
+  height: 15%;
   width: 100%;
   top: 0px;
   left: 0px;
-  opacity: 0.3;
+  /* opacity: 0.4; */
   z-index: -1;
   position: absolute;
 }
-/* categories */
+/* categories in dropdown-menu*/
 .dropdown-content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   border: 2px solid black;
-  border-radius: 5px;
-  /* background-color: #e9d1e6; */
-  background-color: white;
+  /* border-radius: 5px; */
+  background-color: #f3e1d7;
   height: 100%;
-  padding: 0.7%;
+  padding: 5%;
 }
 .outer-dropdown {
   display: none;
   position: absolute;
-  width: 40%;
+  width: 35%;
   height: 35%;
   padding: 2%;
 }
@@ -94,10 +95,15 @@ header img {
   display: inline;
 }
 .dropdown-content a{
-  color: rgb(178 65 92);;
+  color:#324A51;
+  font-size: small;
 }
 .dropdown-content a:hover {
-  text-decoration: underline !important;
+  /* text-decoration: underline !important; */
+  color: #65acc0;
+}
+.dropdown-content :nth-child(1){
+  color:black;
 }
 /* icons */
 .icons img {
@@ -118,9 +124,6 @@ header img {
   /* background-color: chartreuse; */
   flex-grow: 1;
   justify-content: center;
-  /* position: relative; */
-  /* top: 10%; */
-  /* left: 25%; */
 }
 /* searchBox */
 #searchBox {
@@ -130,9 +133,16 @@ header img {
 
 header form input {
   border: none;
-  border-radius: 20px;
+  border-radius: 2px;
   padding: 1% 6%;
-  width: 100%;
+  width: 95%;
+}
+#searchBar img{
+  position: absolute;
+  right: 2.2vw;
+  width: 1.8vw;
+  cursor: pointer;
+  /* margin: auto auto; */
 }
 
 /* transition image section  */
@@ -141,6 +151,7 @@ header form input {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 1%;
+  cursor: pointer;
 }
 #transition-pics img {
   width: 100%;
@@ -340,10 +351,18 @@ header form input {
   left: 0%;
 }
 /* Categories section  */
+:root{
+  --sec-margin:3vh 0vh;
+}
 @media (max-width:680px) {
   .last-img{
     display: none;
   }
+}
+.cat{
+  background-color: #9DBFC9;
+  border: 2px double black;
+  margin: var(--sec-margin);
 }
 .deals {
   display: flex;
@@ -354,21 +373,27 @@ header form input {
 .item {
   margin: 0.35%;
   padding: 0.1%;
-  border: 2px solid black;
-  box-shadow: 0.3rem 0.3rem #00000057;
+  /* border: 2px solid black; */
+  outline: none;
+  box-shadow: 0.3rem 0.3rem #324A51;
   cursor: pointer;
   transition: all 0.2s linear 0s;
+  background-color: white;
+}
+.categories-section h1{
+  
+/* background-color: #D0B4A1; */
+background: radial-gradient(circle, rgba(153,127,110,1) 0%, rgba(208,180,161,1) 36%, rgba(157,191,201,1) 100%);
+padding: 2px;
 }
 
-/* .item:hover .overlay{
-  opacity: 1; */
 
-/* } */
 .item:hover {
   transform: scale(1.05, 1.05);
 }
 .item img {
-  width: 11vw;
+  width: 12.6vw;
+  height: 12.8vw;
   transition: 0.5s ease;
 }
 .image11 {
@@ -382,7 +407,7 @@ header form input {
 
 /* Customers sections */
 #customer img {
-  width: 6vw;
+  width: 4vw;
 }
 #customer {
   margin: 2%;
@@ -399,24 +424,26 @@ header form input {
 .contact h3 {
   font-size: larger;
   margin-bottom: 5%;
+  color: white;
 }
 .contact a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .contact a:hover {
   text-decoration: underline;
 }
 .contact::before {
-  background: url("images/contact.jpg") no-repeat center center/cover;
+  /* background: url("images/contact.jpg") no-repeat center center/cover; */
   content: "";
+  background-color: #324A51;
   position: absolute;
   padding: 0%;
   margin: -1%;
   height: 30vw;
   width: 100%;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 1;
 }
 footer {
   background-color: black;
